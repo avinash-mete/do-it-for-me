@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <title>Do It For Me</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
     <h1>Do It For Me</h1>
     <!-- All of the Node.js APIs are available in this renderer process. -->
-  
+    
+    <form class="login-form">
+      <label for="tour_id">Tour ID</label>
+      <input id="tour_id" type="text" name="tour_id"/>
+
+
+      <label for="email_id">Email ID</label>
+      <input id="email_id" type="email" name="email_id"/>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password"/>
+
+      <input type="submit" value="Login"/>
+
+      <input type="button" value="Run" onclick="worldbankDemo()">
+    </form>
+
 
     <script>
       // You can also require other files to run in this process

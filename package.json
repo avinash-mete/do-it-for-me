@@ -1,18 +1,21 @@
 {
-    "name": "do-it-for-me",
-    "version": "1.0.0",
-    "description": "My Guide App",
-    "main": "main.js",
-    "scripts": {
-      "start": "electron ."
-    },
-    "keywords": [
-      "Electron",
-      "start"
-    ],
-    "author": "Avinash",
-    "devDependencies": {
-      "electron": "^2.0.0"
-    }
+  "name": "do-it-for-me",
+  "version": "1.0.0",
+  "description": "My Guide App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "start"
+  ],
+  "author": "Avinash",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "chromedriver": "^2.41.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
   }
-  
+}

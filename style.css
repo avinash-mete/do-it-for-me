@@ -1,0 +1,30 @@
+.login-form label{
+    display: block;
+}
+
+.login-form input{
+    display: block;
+}
+
+.login-form input[type=text],.login-form input[type=email],
+.login-form input[type=password]  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #cccccc;
+}
+
+.login-form input[type=submit],.login-form input[type=button]   {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #e7434c;
+    border: 2px solid #e7434c;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
