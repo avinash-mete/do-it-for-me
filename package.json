@@ -4,7 +4,9 @@
   "description": "My Guide App",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "asar pack DoItForMe-darwin-x64/DoItForMe.app/Contents/Resources/app DoItForMe-darwin-x64/DoItForMe.app/Contents/Resources/app.asar",
+    "build": "electron-packager . DoItForMe"
   },
   "keywords": [
     "Electron",
@@ -12,10 +14,13 @@
   ],
   "author": "Avinash",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "asar": "^0.14.3",
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.2"
   },
   "dependencies": {
-    "chromedriver": "^2.41.0",
+    "browserevent": "^0.2.0",
+    "chromedriver": "^2.42.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }

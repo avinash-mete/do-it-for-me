@@ -7,18 +7,26 @@ const {app, BrowserWindow} = require('electron');
 let mainWindow;
 
 
+function Send(message) {
+  let msgStr = JSON.stringify(message);
+  let lengthStr = String.fromCharCode(
+      msgStr.length & 0x000000ff,
+      (msgStr.length >> 8) & 0x000000ff,
+      (msgStr.length >> 16) & 0x000000ff,
+      (msgStr.length >> 24) & 0x000000ff
+  );
+  process.stdout.write(lengthStr+msgStr);
+}
+
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
-
+  mainWindow.loadFile('index.html');
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
-  setTimeout(function(){
-    mainWindow.minimize();
-  },3000)
+  mainWindow.webContents.openDevTools();
   
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -28,6 +36,7 @@ function createWindow () {
     mainWindow = null
   })
 }
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
